@@ -11,20 +11,19 @@ const locations = [
 const items = [
 	{
 		bgImage: {
-			'background-image': 'url(assets/images/gigs/22-05-29.png)',
+			'background-image': 'url(assets/images/gigs/22-07-02.png)',
 			'background-size': 'cover'
 		},
-		title: 'Scooter Scrambler',
-		location: 'Dubliner Irish Pub',
-		description:
-			"No matter if it's a Twist-n-Go or a two stroke terror all are welcome! Ska and Northern Soul for you enjoyment while you show off your bike at the pub. See you there!!",
-		date: 'May 29',
-		isoDate: '2022-05-29',
-		time: '3pm - 7pm',
-		url: 'https://www.facebook.com/events/517658389856309',
+		title: 'Syndicate Sound System',
+		location: 'Charlies Star Lounge',
+		description: 'Let the music fill your soul while your feet hit the floor!',
+		date: 'July 2',
+		isoDate: '2022-07-02',
+		time: '9pm - 2am',
+		url: 'https://www.facebook.com/events/374645727849956',
 		center: {
-			lat: locations[0].dubliner.lat,
-			lng: locations[0].dubliner.lng
+			lat: locations[0].charlies.lat,
+			lng: locations[0].charlies.lng
 		}
 	}
 ];
