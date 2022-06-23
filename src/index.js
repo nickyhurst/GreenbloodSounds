@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Create Import file
+import './index.scss';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import Demo from './layout/GbsLayout';
+import error404 from './elements/error404';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import * as serviceWorker from './serviceWorker';
+
+class Root extends Component {
+	render() {
+		return (
+			<BrowserRouter basename={'/'}>
+				{/* <PageScrollTop> */}
+				<Switch>
+					<Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo} />
+
+					<Route path={`${process.env.PUBLIC_URL}/404`} component={error404} />
+					<Route component={error404} />
+				</Switch>
+				{/* </PageScrollTop> */}
+			</BrowserRouter>
+		);
+	}
+}
+
+ReactDOM.render(<Root />, document.getElementById('root'));
+serviceWorker.register();
